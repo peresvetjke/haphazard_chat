@@ -1,24 +1,11 @@
-# README
+# Haphazard chat
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The goal of this simple self-education project of mine is to build a chat-room app with:
+* Rails 7, Ruby 3.0.0
+* Hotwire, 
+* Elastic search
+* Bulma
 
-Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### ER Diagram
+![alt text](https://github.com/peresvetjke/haphazard_chat/blob/main/haphazard_chat_v1.png?raw=true)
