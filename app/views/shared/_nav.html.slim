@@ -1,0 +1,32 @@
+nav.navbar aria-label=("main navigation") role="navigation" 
+  .navbar-brand
+    a.navbar-burger aria-expanded="false" aria-label="menu" data-target="navbarBasicExample" role="button" 
+      span aria-hidden="true" 
+      span aria-hidden="true" 
+      span aria-hidden="true" 
+  #navbarBasicExample.navbar-menu
+    .navbar-start
+      = link_to "Home", users_path, class: "navbar-item"
+      a.navbar-item
+        | Documentation
+      .navbar-item.has-dropdown.is-hoverable
+        a.navbar-link
+          | More
+        .navbar-dropdown
+          a.navbar-item
+            | About
+          a.navbar-item
+            | Contact
+          hr.navbar-divider/
+          a.navbar-item
+            | Report an issue
+    .navbar-end
+      .navbar-item
+        - if current_user
+          p = "Welcome, #{current_user.email}!"
+          .buttons
+            = link_to "Log out", destroy_user_session_path, class: "button is-light"
+        - else
+          .buttons
+            = link_to "Sign up", new_user_registration_path, class: "button is-primary"
+            = link_to "Log in", new_user_session_path, class: "button is-light"
