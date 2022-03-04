@@ -5,5 +5,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "users#index"
 
-  resources :users, only: :index
+  resources :chats
+  resources :users, only: :index do
+    post :start_chat, on: :member
+  end
 end

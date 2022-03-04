@@ -3,3 +3,4 @@ p.title Users
 - @users.each do |user|
   .box
     p = user.login
+    = button_to "Send message", start_chat_user_path(user), class: "button"
