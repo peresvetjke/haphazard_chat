@@ -38,11 +38,7 @@ class MessagesController < ApplicationController
 
   def destroy
     respond_to do |format|
-      format.html {
-        # chat = @message.chat
-        # @message.destroy
-        redirect_to @message.destroy.chat
-      }
+      format.html { redirect_to @message.destroy.chat }
     end
   end
 
