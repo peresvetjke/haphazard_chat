@@ -10,3 +10,11 @@
   login = "user#{u+1}"
   User.create!(login: login, email: "#{login}@example.com", password: "xxxxxx")
 end
+
+user_one = User.first
+user_two = User.last
+
+user_one.start_chat_with(user_two)
+
+Chat.first.add_message(author: user_one, body: "Hi!")
+Chat.first.add_message(author: user_two, body: "Hello!")

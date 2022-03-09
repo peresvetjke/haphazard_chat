@@ -6,7 +6,9 @@ nav.navbar aria-label=("main navigation") role="navigation"
       span aria-hidden="true" 
   #navbarBasicExample.navbar-menu
     .navbar-start
-      = link_to "Home", users_path, class: "navbar-item"
+      = link_to "Users", users_path, class: "navbar-item"
+      = link_to "Chats", chats_path, class: "navbar-item"
+
       a.navbar-item
         | Documentation
       .navbar-item.has-dropdown.is-hoverable

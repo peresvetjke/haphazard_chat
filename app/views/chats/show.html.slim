@@ -1,0 +1,8 @@
+p.title = "Chat ##{@chat.id}"
+
+= turbo_stream_from "messages"
+= turbo_frame_tag "messages"
+  = render @messages
+
+= turbo_frame_tag "message_form"
+  = render partial: "messages/form", locals: { message: @chat.messages.new }

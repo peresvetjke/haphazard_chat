@@ -1,0 +1,7 @@
+= content_tag "div", id: dom_id(message)
+  - if message.errors.present?
+    = render "shared/errors", resource: message
+
+  = form_with model: message, url: (message.new_record? ? chat_messages_path(message.chat) : message_path(message)), class: "mt-5" do |form|
+  	= form.text_field :body, class: "input field"
+  	= form.submit "Save", class: "button field is-small"

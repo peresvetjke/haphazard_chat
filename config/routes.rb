@@ -6,4 +6,7 @@ Rails.application.routes.draw do
   root "users#index"
 
   resources :users, only: :index
+  resources :chats, only: %i[index show] do
+    resources :messages, shallow: true
+  end
 end
