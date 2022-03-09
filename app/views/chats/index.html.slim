@@ -1,0 +1,5 @@
+p.title Chats
+
+- @chats.each do |chat|
+  .box
+    p = link_to "Chat ##{chat.id}", chat_path(chat)

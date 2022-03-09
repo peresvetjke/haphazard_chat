@@ -1,0 +1,7 @@
+= turbo_frame_tag dom_id(message), class: "box"
+  p = message.body
+  p.is-size-7.has-text-grey = "#{message.author.login} at #{message.created_at.strftime("%H:%M %d/%m/%Y")}"
+
+  = link_to "Edit", edit_message_path(message)
+  = '  '
+  = button_to "Delete", message_path(message), method: :delete, data: { confirm: "Are you sure?" }
